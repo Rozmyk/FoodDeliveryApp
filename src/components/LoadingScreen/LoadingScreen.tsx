@@ -13,31 +13,29 @@ const LoadingScreen = () => {
 			document.body.style.overflow = 'hidden'
 			controls.start('animate')
 		} else {
-			const timer = setTimeout(() => {
+			
 				document.body.style.overflow = 'auto'
 				controls.start('exit')
-			}, 500)
+			
 
-			return () => {
-				clearTimeout(timer)
-				document.body.style.overflow = 'auto'
-			}
+			
 		}
 	}, [loading, controls])
 
 	const loadingScreenVariants = {
 		animate: {
-			opacity: 1,
-			pointerEvents: 'auto',
-			transition: {
-				duration: 0.5,
-			},
+		  opacity: 1,
+		 
+		  transition: {
+			duration: 0.5,
+		  },
 		},
 		exit: {
-			opacity: 0,
-			pointerEvents: 'none',
+		  opacity: 0,
+		  
 		},
-	}
+	  };
+	  
 
 	return (
 		<motion.div

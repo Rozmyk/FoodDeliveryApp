@@ -22,7 +22,10 @@ export interface Review {
 		url: string
 	}
 	reviewId: string
-	timestamp: Date
+	timestamp: {
+		seconds: number
+		nanoseconds: number
+	}
 	userData: {
 		localId: string
 		name: string
@@ -331,7 +334,10 @@ export interface SingleUserReviewProps {
 		url: string
 	}
 	reviewId: string
-	timestamp: Date
+	timestamp: {
+		seconds: number
+		nanoseconds: number
+	}
 	userData: {
 		localId: string
 		name: string

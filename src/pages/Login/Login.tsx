@@ -7,8 +7,6 @@ import {
 	Link,
 	IconButton,
 	Divider,
-	Checkbox,
-	FormControlLabel,
 	InputAdornment,
 } from '@mui/material'
 import useWebsiteTitle from '../../hooks/useWebsiteTitle'
@@ -17,7 +15,6 @@ import { useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
-import logo from '../../assets/photos/google-logo.png'
 import * as yup from 'yup'
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { getAuth } from 'firebase/auth'
