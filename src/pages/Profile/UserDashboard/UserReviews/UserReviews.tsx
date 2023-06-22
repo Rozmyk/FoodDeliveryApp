@@ -12,6 +12,7 @@ const UserReviews = ({ reviews, loading, setReviews }: UserReviewsProps) => {
 	const sortReviewsByTimestamp = (reviews: Review[]) => {
 		reviews.sort((a, b) => {
 			const timestampA = new Date(a.timestamp.seconds * 1000 + a.timestamp.nanoseconds / 1000000)
+			console.log(a.timestamp)
 			const timestampB = new Date(b.timestamp.seconds * 1000 + b.timestamp.nanoseconds / 1000000)
 			return timestampB.getTime() - timestampA.getTime()
 		})

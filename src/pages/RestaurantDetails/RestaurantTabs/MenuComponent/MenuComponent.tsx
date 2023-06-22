@@ -9,7 +9,7 @@ export default function MenuComponent({ categories, products, restaurant,  setUp
 	const [selectedCategory, setSelectedCategory] = useState<number | null>(-1)
 	const isMobile = useMediaQuery('(max-width:600px)')
 
-	const handleCategoryChange = (event: React.ChangeEvent<{}>, newValue: number | null) => {
+	const handleCategoryChange = (_: React.ChangeEvent<{}>, newValue: number | null) => {
 		setSelectedCategory(newValue)
 	}
 

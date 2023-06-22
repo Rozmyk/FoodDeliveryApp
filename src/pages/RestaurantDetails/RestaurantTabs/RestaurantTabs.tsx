@@ -39,7 +39,7 @@ function a11yProps(index: number) {
 export default function RestaurantTabs({ categories, setUpPopup, restaurant, id,  }: RestaurantTabsProps) {
 	const [value, setValue] = useState(0)
 
-	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+	const handleChange = (_: React.SyntheticEvent, newValue: number) => {
 		setValue(newValue)
 	}
 

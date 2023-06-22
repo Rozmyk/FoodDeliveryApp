@@ -58,7 +58,7 @@ export default function ReviewsComponent({ averageRating, id }: ReviewsComponent
 		getReview()
 	}, [restaurants, location.pathname])
 
-	const handlePageChange = (event: React.ChangeEvent<unknown>, page: number) => {
+	const handlePageChange = (_: React.ChangeEvent<unknown>, page: number) => {
 		setPage(page)
 	}
 

@@ -66,7 +66,7 @@ const EditSingleReview = ({
 		onSubmit: submit,
 	})
 
-	const handleRatingChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+	const handleRatingChange = (_: React.ChangeEvent<{}>, newValue: number) => {
 		setRatingValue(newValue)
 	}
 

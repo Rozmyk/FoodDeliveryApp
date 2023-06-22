@@ -74,7 +74,7 @@ export const RestaurantsContextProvider: React.FC<{ children: React.ReactNode }>
 			categorySnapshot.forEach(category => {
 				const categoryData: Category = category.data() as Category
 				categories.push(categoryData)
-				console.log(categoryData)
+				
 			})
 
 			categories.sort((a, b) => a.key - b.key)
@@ -128,7 +128,7 @@ export const RestaurantsContextProvider: React.FC<{ children: React.ReactNode }>
 		const reviewsCollections = collectionGroup(db, 'Reviews')
 		const unsubscribe = onSnapshot(reviewsCollections, () => {
 			getRestaurantData()
-			console.log('dane zostaly zaktuzliwaone')
+			
 		})
 
 		return unsubscribe

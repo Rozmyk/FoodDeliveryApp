@@ -19,7 +19,6 @@ import {
 	PopupDataProps,
 	Product,
 	CurrentRestaurant,
-	SetUpPopupInterface,
 } from '../../types/types'
 import MiniCart from '../Cart/MiniCart/MiniCart'
 export default function RestaurantDetails() {

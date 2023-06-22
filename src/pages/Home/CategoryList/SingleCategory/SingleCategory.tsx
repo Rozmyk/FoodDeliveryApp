@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
-import { useNavigate, createSearchParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { SingleCategoryProps } from '../../../../types/types'
 
 const SingleCategory = ({ category, index }: SingleCategoryProps) => {

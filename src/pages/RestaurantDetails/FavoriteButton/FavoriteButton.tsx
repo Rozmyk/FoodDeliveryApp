@@ -24,7 +24,7 @@ export default function FavoriteButton({ name, photo, category, id }: FavoriteBu
 				userLocalId: userData.localId,
 			}
 
-			const userRef = await addDoc(collection(db, 'FavouriteRestaurants'), restaurantData)
+			 await addDoc(collection(db, 'FavouriteRestaurants'), restaurantData)
 			enqueueSnackbar(`Pomyślnie dodano restaurację ${name} do ulubionych`)
 			setFavourite(true)
 		} catch (err) {

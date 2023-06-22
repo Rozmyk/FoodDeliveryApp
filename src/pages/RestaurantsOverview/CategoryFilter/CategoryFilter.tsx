@@ -6,11 +6,11 @@ import { Category, CategoryFilterProps } from '../../../types/types'
 function CategoryFilter({ setUpCategory }: CategoryFilterProps) {
 	const { categories } = useContext(RestaurantsContext)
 
-	const [searchParams, setSearchParams] = useSearchParams({ category: '' })
+	const [searchParams] = useSearchParams({ category: '' })
 	const category = searchParams.get('category')
 	const [value, setValue] = useState<number>(0)
 
-	const handleChange = (event: ChangeEvent<{}>, newValue: number) => {
+	const handleChange = (_: ChangeEvent<{}>, newValue: number) => {
 		setValue(newValue)
 	}
 

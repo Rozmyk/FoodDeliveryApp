@@ -2,7 +2,7 @@ import { Typography, Box, Button, Grid } from '@mui/material'
 import { useSnackbar } from 'notistack'
 import { Promocode } from '../../../../types/types'
 export default function SingleCard({backgroundColor, fontColor, value, description, btnColor, btnColorHover, code, photo, color}:Promocode) {
-	const { enqueueSnackbar, closeSnackbar } = useSnackbar()
+	const { enqueueSnackbar} = useSnackbar()
 	const handleCopyToClipboard = () => {
 		navigator.clipboard.writeText(code)
 		enqueueSnackbar(`Pomyślnie skopiowano '${code}'`);

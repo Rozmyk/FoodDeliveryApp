@@ -10,13 +10,12 @@ const UserDashboard = ({
 	favRestaurants,
 	setFavRestaurants,
 	loadingFavourites,
-
 	setReviews,
 	reviews,
 	loadingReviews,
 }: UserDashboardProps) => {
 	const [value, setValue] = useState(0)
-	const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+	const handleChange = (_: React.ChangeEvent<{}>, newValue: number) => {
 		setValue(newValue)
 	}
 	return (

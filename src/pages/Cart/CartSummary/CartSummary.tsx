@@ -12,7 +12,7 @@ export default function CartSummary() {
 	const freeShippingPrice: number = cart.currentRestaurant.free_ship
 	const deliveryPrice: number = cart.currentRestaurant.delivery_price
 	const discountedPrice: number = cart.total * cart.discount.discountValue
-	const { enqueueSnackbar, closeSnackbar } = useSnackbar()
+	const { enqueueSnackbar } = useSnackbar()
 	const [subtotal, setSubtotal] = useState<number>(cartTotal)
 	const [freeShipping, setFreeShipping] = useState<boolean>(false)
 	const navigate = useNavigate()

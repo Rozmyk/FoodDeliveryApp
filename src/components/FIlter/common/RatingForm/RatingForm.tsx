@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CustomAccordion from '../CustomAccordion/CustomAccordion'
 import { Rating } from '@mui/material'
 import { RatingFormProps } from '../../../../types/types'
 
 const RatingForm: React.FC<RatingFormProps> = ({ setSearchValues, rating }) => {
-	const [value, setValue] = useState(0)
+	
 
-	const handleChange = (event: React.ChangeEvent<{}>, newValue: number | null) => {
+	const handleChange = (_: React.ChangeEvent<{}>, newValue: number | null) => {
 		if (newValue !== null) {
-			setValue(newValue)
+			
 			setSearchValues(prevValues => ({
 				...prevValues,
 				rating: parseFloat(newValue.toFixed(1)),

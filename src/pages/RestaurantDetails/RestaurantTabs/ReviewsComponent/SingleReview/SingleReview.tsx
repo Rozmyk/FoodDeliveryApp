@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { SingleReviewProps } from '../../../../../types/types'
 export default function SingleReview({ timestamp, index, userData, value, comment }: SingleReviewProps) {
 	const isScreenLarge = useMediaQuery('(min-width:1000px)')
-
+console.log(timestamp)
 	const timeDifference = timestamp ? getTimeDifference(timestamp) : ''
 
 	return (

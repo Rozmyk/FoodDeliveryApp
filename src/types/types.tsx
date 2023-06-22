@@ -261,7 +261,10 @@ export interface ReviewsComponentProps {
 	id: string
 }
 export interface SingleReviewProps {
-	timestamp: Date
+	timestamp: {
+		seconds: number
+		nanoseconds: number
+	}
 	index: number
 	userData: {
 		name: string

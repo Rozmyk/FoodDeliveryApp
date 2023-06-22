@@ -1,7 +1,7 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material'
 import CartContext from '../../../contexts/CartContext'
 import { useContext } from 'react'
-import { WarningPopupProps, SetUpPopupInterface } from '../../../types/types'
+import { WarningPopupProps } from '../../../types/types'
 export default function WarningPopup({ product, restaurant, show, setUpPopup }: WarningPopupProps) {
 	const cart = useContext(CartContext)
 
