@@ -1,14 +1,5 @@
 import { Container } from '@mui/system'
-import {
-	Typography,
-	Box,
-	TextField,
-	Button,
-	Link,
-	IconButton,
-	Divider,
-	InputAdornment,
-} from '@mui/material'
+import { Typography, Box, TextField, Button, Link, IconButton, Divider, InputAdornment } from '@mui/material'
 import useWebsiteTitle from '../../hooks/useWebsiteTitle'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
@@ -117,44 +108,41 @@ export default function Login() {
 					gap: '16px',
 					marginTop: '16px',
 					width: '100%',
-					
 				}}>
 				<form onSubmit={formik.handleSubmit}>
-					
-						<TextField
-							fullWidth
-							id='email'
-							name='email'
-							variant='standard'
-							label='Email'
-							value={formik.values.email}
-							onChange={formik.handleChange}
-							error={formik.touched.email && Boolean(formik.errors.email)}
-							helperText={formik.touched.email && formik.errors.email}
-						/>
-						<TextField
-							fullWidth
-							id='password'
-							name='password'
-							variant='standard'
-							label='Hasło'
-							type={showPassword ? 'text' : 'password'}
-							value={formik.values.password}
-							onChange={formik.handleChange}
-							error={formik.touched.password && Boolean(formik.errors.password)}
-							helperText={formik.touched.password && formik.errors.password}
-							InputProps={{
-								endAdornment: (
-									<InputAdornment position='end'>
-										<IconButton onClick={handleTogglePasswordVisibility}>
-											{showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
-										</IconButton>
-									</InputAdornment>
-								),
-							}}
-						/>
-						
-					
+					<TextField
+						fullWidth
+						id='email'
+						name='email'
+						variant='standard'
+						label='Email'
+						value={formik.values.email}
+						onChange={formik.handleChange}
+						error={formik.touched.email && Boolean(formik.errors.email)}
+						helperText={formik.touched.email && formik.errors.email}
+					/>
+					<TextField
+						fullWidth
+						id='password'
+						name='password'
+						variant='standard'
+						label='Hasło'
+						type={showPassword ? 'text' : 'password'}
+						value={formik.values.password}
+						onChange={formik.handleChange}
+						error={formik.touched.password && Boolean(formik.errors.password)}
+						helperText={formik.touched.password && formik.errors.password}
+						InputProps={{
+							endAdornment: (
+								<InputAdornment position='end'>
+									<IconButton onClick={handleTogglePasswordVisibility}>
+										{showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+									</IconButton>
+								</InputAdornment>
+							),
+						}}
+					/>
+
 					<Button
 						color='primary'
 						variant='contained'
@@ -190,9 +178,10 @@ export default function Login() {
 						</Link>
 					</Typography>
 				</Box>
-				<Typography textAlign='center' mb={2} mt={2} variant='body1' color='text.secondary'>
-					lub
-				</Typography>
+				<Divider sx={{  width:'100%' }} variant='middle'>
+					Lub
+				</Divider>
+				
 				<GoogleButton loading={loading} onClick={signInWithGoogle} text='Zaloguj się z Google' />
 			</Box>
 		</Container>

@@ -35,7 +35,13 @@ export default function Information() {
 					ulubionych. Dane o restauracjach są pobierane z Firebase, a strona pozwala na filtrowanie restauracji za
 					pomocą filtrów.
 				</Typography>
-				<Link sx={{ marginTop: '50px' }}>Github link</Link>
+				<Typography sx={{margin:'25px 0'}}>
+					Icons by <Link href='https://icons8.com/'>Icons8.com</Link>
+				</Typography>
+				<Link sx={{ marginTop: '50px' }} href='https://github.com/Rozmyk/FoodDeliveryApp'>
+					https://github.com/Rozmyk/FoodDeliveryApp
+				</Link>
+
 				<Box sx={{ display: 'flex', flexDirection: 'column', marginTop: '50px' }}>
 					<TitleWithSubtitle
 						title='Wykorzystane technologie:'

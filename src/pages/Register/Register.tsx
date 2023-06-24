@@ -1,5 +1,5 @@
 import { Container } from '@mui/system'
-import { Typography, Box, TextField, Link, Button, InputAdornment, IconButton } from '@mui/material'
+import { Typography, Box, TextField, Link, Button, InputAdornment, IconButton, Divider } from '@mui/material'
 import useWebsiteTitle from '../../hooks/useWebsiteTitle'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
@@ -253,9 +253,9 @@ function Register(): JSX.Element {
 						</Link>
 					</Typography>
 				</Box>
-				<Typography variant='body2' color='textSecondary' align='center'>
-					lub
-				</Typography>
+				<Divider sx={{  width:'100%' }} variant='middle'>
+					Lub
+				</Divider>
 
 				<GoogleButton loading={loading} onClick={signInWithGoogle} text='Zarejestruj się z google' />
 			</Box>

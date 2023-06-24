@@ -78,9 +78,7 @@ function Footer() {
                 <MuiLink component={RouterLink} underline='none' to='/restauracje' variant='body2' color='text.primary'>
                   Restauracje
                 </MuiLink>
-                <MuiLink component={RouterLink} underline='none' to='/koszyk' variant='body2' color='text.primary'>
-                  Koszyk
-                </MuiLink>
+                
                 <MuiLink component={RouterLink} underline='none' to='/informacje' variant='body2' color='text.primary'>
                   Informacje
                 </MuiLink>
